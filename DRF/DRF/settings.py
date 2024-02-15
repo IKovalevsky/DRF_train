@@ -131,7 +131,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    #'DEFAULT_PERMISSION_CLASSES': 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    'DEFAULT_PERMISSION_CLASSES': 'rest_framework.permissions.AllowAny',
     'DEFAULT_PAGINATION_CLASSES': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SISE' : 10,
 }
+
+CORS_ORIGINS_ALLOW_ALL = True
